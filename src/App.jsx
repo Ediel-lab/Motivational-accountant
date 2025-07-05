@@ -6,7 +6,7 @@ function App() {
   const [fraseAtual, setFraseAtual] = useState('')
 
   const frasesMotivacionais = [
-    'Você está mais perto do que imagina!',
+        'Você está mais perto do que imagina!',
     'Cada passo conta. Continue!',
     'A persistência te levará longe.',
     'Você nasceu para conquistar!',
@@ -21,6 +21,7 @@ function App() {
     'Confie em si mesmo!',
     'Você está brilhando!',
     'Nada pode te parar agora!',
+    'Nada pode te parar agora! - Bem, só o seu dedo pode, eu acho.',
     'Força, foco e fé!',
     'Você está escrevendo sua própria história!',
     'Cada clique é um passo rumo ao sucesso!',
