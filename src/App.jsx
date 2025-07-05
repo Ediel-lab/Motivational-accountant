@@ -70,9 +70,13 @@ function App() {
   return (
     <>
       <h1>Contador</h1>
+      <h2>motivacional</h2>
       <div className="card">
+        <div className="contador">
+          {count}
+        </div>
         <button onClick={handleClick}>
-          O contador está em: {count}
+          Tentar mais uma vez
         </button>
         {count >= 5000 ? (
           <p className="message">🎉 Parabéns! Você alcançou os 5000!</p>
