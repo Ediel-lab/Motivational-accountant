@@ -4,6 +4,8 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(10)
   const [fraseAtual, setFraseAtual] = useState('')
+  const [operacoes, setOperacoes] = useState([]);
+  const [ultimaOperacao, setUltimaOperacao] = useState({ valor: 0, tipo: '' });
 
   const frasesMotivacionais = [
     'Você está mais perto do que imagina!',
@@ -53,34 +55,62 @@ function App() {
   ]
 
   const handleClick = () => {
-    const operacao = Math.random() < 0.6 ? 'somar' : 'subtrair'
-    const valores = [20, 25, 30]
-    const valor = valores[Math.floor(Math.random() * valores.length)]
+    const operacao = Math.random() < 0.6 ? 'somar' : 'subtrair';
+    const valores = [20, 25, 30];
+    const valor = valores[Math.floor(Math.random() * valores.length)];
 
-    const novoValor = operacao === 'somar' ? count + valor : count - valor
-    setCount(novoValor)
+    const novoValor = operacao === 'somar' ? count + valor : count - valor;
+    setCount(novoValor);
+    
+    // Atualiza a operação atual para animação
+    setUltimaOperacao({ valor, tipo: operacao });
+    
+    // Adiciona à lista de operações para múltiplas animações
+    const novaOperacao = {
+      valor,
+      tipo: operacao,
+      id: Date.now() + Math.random()
+    };
+    setOperacoes(prev => [...prev, novaOperacao]);
 
-    // Mostra nova frase a cada múltiplo de 250 (sem repetir se já mostrou)
+    // Remove a operação após a animação
+    setTimeout(() => {
+      setOperacoes(prev => prev.filter(op => op.id !== novaOperacao.id));
+      setUltimaOperacao({ valor: 0, tipo: '' });
+    }, 1500);
+
+    // Lógica das frases motivacionais
     if (novoValor < 5000 && Math.floor(novoValor / 250) !== Math.floor(count / 250)) {
-      const novaFrase = frasesMotivacionais[Math.floor(Math.random() * frasesMotivacionais.length)]
-      setFraseAtual(novaFrase)
-    }
-  }
+      const novaFrase = frasesMotivacionais[Math.floor(Math.random() * frasesMotivacionais.length)];
+      setFraseAtual(novaFrase);
+    };
+  };
+
+  {operacoes.map(op => (
+  <div key={op.id} className={`operacao ${op.tipo}`}>
+    {op.tipo === 'somar' ? '+' : '-'}{op.valor}
+  </div>
+))}
 
   return (
     <>
       <h1>Contador</h1>
       <h2>motivacional</h2>
       <div className="card">
-        <div className="contador">
-          {count}
+        <div className="contador-container">
+          <div className="contador">{count}</div>
+          {ultimaOperacao.tipo && (
+            <div className={`operacao ${ultimaOperacao.tipo}`}>
+              {ultimaOperacao.tipo === 'somar' ? '+' : '-'}{ultimaOperacao.valor}
+            </div>
+          )}
         </div>
         <button onClick={handleClick}>
           Tentar mais uma vez
         </button>
         {count >= 5000 ? (
           <p className="message">🎉 Parabéns! Você alcançou os 5000!</p>
-        ) : count > 100 ? (
+        ) : count > 99 ? (
           <p className="message">🚀 100 atingido! Rumo aos 5000!</p>
         ) : (
           <p className="message">Boa sorte!</p>
