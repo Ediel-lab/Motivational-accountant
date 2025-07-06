@@ -119,69 +119,41 @@ button:focus-visible {
   top: 0;
   width: 100px;
   height: 100vh;
-  background-image: var(--fita-img);
-  background-size: 100% auto;
-  background-repeat: repeat-y;
+  overflow: hidden;
   z-index: -1;
-  animation: descerFita 40s linear infinite;
-}
-
-.fita-esquerda {
-  --fita-img: url('/B-L.png');
-  left: 0;
-  /* Ajuste fino: começa 20% acima */
-  background-position: 0 -20vh;
-  /* Compensa o início antecipado */
-  animation-delay: -8s; /* 20% de 40s */
-}
-
-.fita-direita {
-  --fita-img: url('/B-R.png');
-  right: 0;
-  background-position: 0 -20vh;
-  animation-delay: -8s;
-}
-
-@keyframes descerFita {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 100vh;
-  }
+  pointer-events: none;
 }
 
 .fita-lateral::before {
   content: "";
   position: absolute;
-  top: 100vh;
+  top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  height: 2px;
-  background: red;
-  z-index: 100;
+  height: calc(100vh + 1200px);
+  background-image: var(--fita-img);
+  background-repeat: repeat-y;
+  background-size: 80px auto;
+  animation: descerFita 40s linear infinite;
+} 
+
+.fita-esquerda {
+  --fita-img: url('/B-L.png');
+  left: 0;
 }
 
-.fita-lateral::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: inherit;
-  background-position: inherit;
-  background-size: inherit;
+.fita-direita {
+  --fita-img: url('/B-R.png');
+  right: 0;
 }
-
-
 
 @keyframes descerFita {
   0% {
-    background-position: 0 -20vh; /* Começa acima */
+    transform: translateY(-960px);
   }
   100% {
-    background-position: 0 80vh; /* Termina antes do final */
+    transform: translateY(0);
   }
 }
 
@@ -190,7 +162,7 @@ button:focus-visible {
     width: 80px;
   }
   .fita-esquerda {
-    left: -10px; 
+    left: -10px;
   }
   .fita-direita {
     right: -10px;
