@@ -1,0 +1,60 @@
+﻿{
+  "common":{ 
+  "titulo": "Contador",
+  "subtitulo": "motivacional",
+  "botao": "Intentar de nuevo"
+  },
+  
+  "mensagens": {
+    "parabens": "🎉 ¡Felicidades! ¡Alcanzaste los 5000!",
+    "cemAtingido": "🚀 ¡100 alcanzados! ¡Rumbo a 5000!",
+    "boaSorte": "¡Buena suerte!"
+  },
+
+  "frases": [
+    "¡Estás más cerca de lo que imaginas!",
+    "Cada paso cuenta. ¡Continúa!",
+    "La persistencia te llevará lejos.",
+    "¡Naciste para conquistar!",
+    "¡No pares ahora, la cima te espera!",
+    "El viaje es tan importante como el destino.",
+    "Eres más fuerte de lo que crees.",
+    "Cree en el proceso.",
+    "¡Sigue firme, la victoria está cerca!",
+    "¡Estás haciendo un gran trabajo!",
+    "¡Respira hondo y adelante!",
+    "¡La meta es 5000, y lo lograrás!",
+    "¡Confía en ti mismo!",
+    "¡Estás brillando!",
+    "¡Nada puede detenerte ahora!",
+    "¡Nada puede detenerte ahora! - Bueno, quizá tu dedo pueda, supongo.",
+    "¡Fuerza, enfoque y fe!",
+    "Estás escribiendo tu propia historia.",
+    "Cada clic es un paso hacia el éxito.",
+    "¡Vamos con todo!",
+    "¡Ya casi llegas!",
+    "El esfuerzo de hoy es el éxito de mañana.",
+    "Con cada clic, te acercas más a tu objetivo.",
+    "La victoria es la suma de pequeños esfuerzos repetidos día tras día.",
+    "Eres capaz de cosas increíbles.",
+    "Créelo, estás haciendo la diferencia.",
+    "Los desafíos son oportunidades disfrazadas.",
+    "Eres la prueba de que el esfuerzo da resultados.",
+    "Sigue así, lo estás haciendo muy bien.",
+    "Cada día es una nueva oportunidad para brillar.",
+    "Estás construyendo algo grandioso.",
+    "Tu determinación es inspiradora.",
+    "Vas por el camino correcto.",
+    "Puedes ir más allá de lo que imaginas.",
+    "Tu viaje es único y especial.",
+    "Cree: cada intento te acerca a la conquista.",
+    "Estás haciendo historia con cada clic.",
+    "Tu tenacidad es admirable.",
+    "Estás superando tus límites.",
+    "Lo imposible es solo cuestión de tiempo y dedicación.",
+    "Eres un ejemplo de perseverancia.",
+    "Tu determinación es tu mayor fuerza.",
+    "Los grandes logros comienzan con pequeños pasos.",
+    "Ah, si supieras lo que hay al final, no te detendrías ahora."
+  ]
+}

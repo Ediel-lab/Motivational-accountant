@@ -1,0 +1,60 @@
+﻿
+{
+  "common": {
+    "titulo": "Counter",
+    "subtitulo": "motivational",
+    "botao": "Try again"
+  },
+  "mensagens": {
+      "parabens": "🎉 Congratulations! You reached 5000!",
+      "cemAtingido": "🚀 100 reached! On to 5000!",
+      "boaSorte": "Good luck!"
+  },
+  
+  "frases": [
+    "You're closer than you think!",
+    "Every step counts. Keep going!",
+    "Persistence will take you far.",
+    "You were born to conquer!",
+    "Don't stop now, the top is waiting!",
+    "The journey is as important as the destination.",
+    "You are stronger than you think.",
+    "Trust the process.",
+    "Keep going, victory is just around the corner!",
+    "You're doing a great job!",
+    "Take a deep breath and go!",
+    "The goal is 5000, and you'll get there!",
+    "Trust yourself!",
+    "You're shining!",
+    "Nothing can stop you now!",
+    "Nothing can stop you now! - Well, maybe your finger can, I guess.",
+    "Strength, focus and faith!",
+    "You're writing your own story!",
+    "Each click is a step towards success!",
+    "Let's go all out!",
+    "You're almost there!",
+    "Today's effort is tomorrow's success!",
+    "With each click, you get closer to your goal!",
+    "Victory is the sum of small efforts repeated day after day!",
+    "You're capable of amazing things!",
+    "Believe me, you're making a difference!",
+    "Challenges are disguised opportunities.",
+    "You're living proof that effort brings results!",
+    "Keep it up, you're doing great!",
+    "Every day is a new chance to shine!",
+    "You're building something great!",
+    "Your determination is inspiring!",
+    "You're on the right path!",
+    "You're capable of going beyond what you imagine.",
+    "Your journey is unique and special!",
+    "Believe: every attempt brings you closer to victory.",
+    "You're making history with every click!",
+    "Your grit is admirable!",
+    "You're pushing your limits!",
+    "The impossible is just a matter of time and dedication.",
+    "You're an example of perseverance!",
+    "Your determination is your greatest strength",
+    "Great achievements begin with small steps.",
+    "Oh, if you knew what's at the end, you wouldn't stop now!"
+  ]
+}
