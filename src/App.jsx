@@ -6,7 +6,7 @@ function App() {
   const [fraseAtual, setFraseAtual] = useState('')
   const [operacoes, setOperacoes] = useState([]);
   const [ultimaOperacao, setUltimaOperacao] = useState({ valor: 0, tipo: '' });
-
+  
   const frasesMotivacionais = [
     'Você está mais perto do que imagina!',
     'Cada passo conta. Continue!',
@@ -89,8 +89,7 @@ function App() {
   {operacoes.map(op => (
   <div key={op.id} className={`operacao ${op.tipo}`}>
     {op.tipo === 'somar' ? '+' : '-'}{op.valor}
-  </div>
-))}
+  </div>))}
 
   return (
     <>
@@ -121,6 +120,10 @@ function App() {
           </div>
         )}
       </div>
+      <>
+        <div className="fita-lateral fita-esquerda"></div>
+        <div className="fita-lateral fita-direita"></div>
+      </>
     </>
   )
 }

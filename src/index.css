@@ -114,7 +114,43 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.fita-lateral {
+  position: fixed;
+  top: 0;
+  width: 120px; 
+  height: 200vh; 
+  background-size: contain;
+  background-repeat: repeat-y;
+  z-index: -1; 
+  animation: descerFita 30s linear infinite;
+}
 
+.fita-esquerda {
+  left: 0px;
+  background-image: url('/public/B-L.png');
+}
+
+.fita-direita {
+  right: 0px;
+  background-image: url('public/B-R.png');
+}
+
+@keyframes descerFita {
+  from { transform: translateY(-100vh); }
+  to { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .fita-lateral {
+    width: 80px;
+  }
+  .fita-esquerda {
+    left: -10px; 
+  }
+  .fita-direita {
+    right: -10px;
+  }
+}
 
 
 
