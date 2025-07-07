@@ -10,7 +10,7 @@ function App() {
   const [showPrizeModal, setShowPrizeModal] = useState(false);
 
   const { t, i18n, ready } = useTranslation();
-  const [count, setCount] = useState(4999);
+  const [count, setCount] = useState(10);
   const [fraseAtual, setFraseAtual] = useState('');
   const [operacoes, setOperacoes] = useState([]);
   const [ultimaOperacao, setUltimaOperacao] = useState({ valor: 0, tipo: '' });
