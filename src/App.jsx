@@ -1,12 +1,16 @@
 import { Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import AnimationComponent from './AnimationComponent';
+import PrizeModal from './PrizeModal';
 import LanguageSwitcher from './components/LanguageSwitcher.jsx';
 import './App.css';
 
 function App() {
-  
+  const [showAnimation, setShowAnimation] = useState(false);
+  const [showPrizeModal, setShowPrizeModal] = useState(false);
+
   const { t, i18n, ready } = useTranslation();
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(4999);
   const [fraseAtual, setFraseAtual] = useState('');
   const [operacoes, setOperacoes] = useState([]);
   const [ultimaOperacao, setUltimaOperacao] = useState({ valor: 0, tipo: '' });
@@ -39,6 +43,14 @@ function App() {
       setUltimaOperacao({ valor: 0, tipo: '' });
     }, 1500);
 
+    if (novoValor >= 5000 && count < 5000) {
+      setShowAnimation(true);
+      setTimeout(() => {
+        setShowAnimation(false);
+        setShowPrizeModal(true);
+      }, 3000);
+    }
+
     if (novoValor < 5000 && Math.floor(novoValor / 250) !== Math.floor(count / 250)) {
       const novaFrase = Array.isArray(frasesMotivacionais) 
         ? frasesMotivacionais[Math.floor(Math.random() * frasesMotivacionais.length)]
@@ -62,6 +74,11 @@ function App() {
   return (
     <div dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
       {/* <LanguageSwitcher /> butões de tradução*/}
+
+      {showAnimation && <AnimationComponent />}
+      {showPrizeModal && (
+      <PrizeModal onClose={() => setShowPrizeModal(false)} />
+      )}
       
       <h1>{t('common.titulo')}</h1>
       <h2>{t('common.subtitulo')}</h2>

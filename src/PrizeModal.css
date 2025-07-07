@@ -1,0 +1,173 @@
+.prize-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  font-family: Arial, sans-serif;
+}
+
+.prize-modal {
+  background: linear-gradient(to bottom, #F2A341 0%, #D9843B 100%);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.prize-icon {
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+.prize-description {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.prize-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.prize-option, .claim-button, .copy-button {
+  background: rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.prize-option:hover, .claim-button:hover, .copy-button:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.ebook-cover {
+  width: 120px;
+  height: 160px;
+  background: #fff;
+  margin: 0 auto 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.ebook-cover::before {
+  content: "EBOOK";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #D9843B;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.email-input {
+  width: 80%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.code-container {
+  margin: 1.5rem 0;
+}
+
+.promo-code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-family: monospace;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+.code-instructions {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.close-button, .back-button {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.close-button:hover, .back-button:hover {
+  opacity: 0.8;
+}
+
+.error-message {
+  color: #ff3333;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.email-input.invalid {
+  border: 2px solid #ff3333;
+}
+
+.amazon-logo {
+  width: 120px;
+  margin: 0 auto 1rem;
+}
+
+.amazon-logo svg {
+  width: 100%;
+  height: auto;
+}
+
+.amazon-button {
+  background: linear-gradient(to bottom, #FF9900, #FFAC31);
+  border: 1px solid #9E7D27;
+  color: #000;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.amazon-button:hover {
+  background: linear-gradient(to bottom, #FFAC31, #FF9900);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.code-container a {
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.code-container a:hover {
+  text-decoration: underline;
+}
